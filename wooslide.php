@@ -26,12 +26,6 @@ Text Domain: wooslide
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-function cl ($data) {
-  echo '<script>';
-  echo 'console.log('. json_encode(  $data ) .') ';
-  echo '</script>';
-}
-
 if(preg_match('#' . basename(__FILE__) . '#', $_SERVER['PHP_SELF'])) {
 	die('Illegal Entry');
 }
