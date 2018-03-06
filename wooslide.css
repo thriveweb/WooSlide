@@ -33,18 +33,23 @@
 }
 
 .WooSlide--gallery-thumbs {
-  height: 100px;
+  height: 125px;
   padding: 10px 0;
 }
 
-.WooSlide--gallery-thumbs .swiper-slide {
-  width: 25%;
+.WooSlide--gallery-thumbs .swiper-wrapper > .swiper-slide {
+  width: auto;
   height: 100%;
-  opacity: 0.4;
   cursor: pointer;
 }
 
-.WooSlide--gallery-thumbs .swiper-slide-active {
+.WooSlide--gallery-thumbs .swiper-wrapper > .swiper-slide img {
+  width: auto;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.WooSlide--gallery-thumbs .swiper-wrapper > .swiper-slide-active img {
   opacity: 1;
 }
 

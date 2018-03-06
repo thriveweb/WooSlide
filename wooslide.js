@@ -22,10 +22,6 @@
 
     WooSlideGalleryTop.controller.control = WooSlideGalleryThumbs
     WooSlideGalleryThumbs.controller.control = WooSlideGalleryTop
-
-    document.querySelector('.swiper-button-next').onclick = () => {
-      console.log('teast')
-    }
   })()
   ;(function photoSwipe() {
     var pswpElement = document.querySelectorAll('.pswp')[0]
@@ -61,8 +57,8 @@
       items.push(item)
     }
     // Adding items to image for lightbox
-    if ($('.WooSlide--gallery-thumbs .swiper-slide').length > 0) {
-      var $thumbs = $('.WooSlide--gallery-thumbs .swiper-slide')
+    if ($('.WooSlide--gallery-top .swiper-slide').length > 0) {
+      var $thumbs = $('.WooSlide--gallery-top .swiper-slide')
       var thumbAlt = $thumbs.attr('alt')
       for (var i = 0; i < $thumbs.length; i++) {
         $thumbs.attr('data-title', thumbAlt)

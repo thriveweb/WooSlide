@@ -230,7 +230,7 @@ function wooslide_woocommerce_show_product_thumbnails(){
 					'data-w' => $hq[1],
 					'data-h' => $hq[2],
 					'class' => 'swiper-slide'
-					)
+				)
 			);
 
 			return $image;
@@ -281,7 +281,7 @@ function wooslide_woocommerce_show_product_thumbnails(){
 		    <div class="swiper-wrapper">
 		        <!-- Slides -->
 						<?php foreach($images as $image) {
-							echo $image;
+							echo '<div class="swiper-slide">' . $image . '</div>';
 						} ?>
 		    </div>
 		</div>
