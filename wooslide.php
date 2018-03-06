@@ -80,7 +80,7 @@ class wooslide_plugin_options {
 
 			<h2>WooSlide Options</h2>
 
-			<p>WooSlide is a WooCommerce gallery plugin for WordPress built using Photoswipe from  Dmitry Semenov.  <a href="http://photoswipe.com/">Photoswipe</a> and a href="https://github.com/nolimits4web/Swiper">Swiper</a></p>
+			<p>WooSlide is a WooCommerce gallery plugin for WordPress built using Photoswipe from  Dmitry Semenov.  <a href="http://photoswipe.com/">Photoswipe</a> and <a href="https://github.com/nolimits4web/Swiper">Swiper</a></p>
 
 			<p>More options coming soon. Edit your image sizes <a href="<?php echo admin_url( 'admin.php?page=wc-settings&tab=products&section=display', 'http' ); ?> "> here </a></p>
 
