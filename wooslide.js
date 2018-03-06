@@ -28,7 +28,6 @@
     }
   })()
   ;(function photoSwipe() {
-    return false
     var pswpElement = document.querySelectorAll('.pswp')[0]
     var items = []
 
@@ -62,32 +61,30 @@
       items.push(item)
     }
     // Adding items to image for lightbox
-    if ($('.thumbnails .thumb').length > 0) {
-      var $thumbs = $('.thumbnails .thumb')
-      var thumbAlt = $thumbs.find('img').attr('alt')
+    if ($('.WooSlide--gallery-thumbs .swiper-slide').length > 0) {
+      var $thumbs = $('.WooSlide--gallery-thumbs .swiper-slide')
+      var thumbAlt = $thumbs.attr('alt')
       for (var i = 0; i < $thumbs.length; i++) {
         $thumbs.attr('data-title', thumbAlt)
         pushItem($thumbs[i])
       }
-    } else if ($('.single-product-main-image').length > 0) {
-      var singleImg = $('.single-product-main-image img')
+    } else if ($('.WooSlide--gallery-top .swiper-slide').length > 0) {
+      var singleImg = $('.WooSlide--gallery-top .swiper-slide')[0]
       var singleImgAlt = singleImg.attr('alt')
       singleImg.attr('data-title', singleImgAlt)
 
-      var $this = $('.single-product-main-image img')[0]
+      var $this = $('.WooSlide--gallery-top .swiper-slide')[0]
       pushItem($this)
     }
 
     // click event
-    if ($('.single-product-main-image').length > 0) {
-      $('.single-product-main-image').click(function(e) {
+    if ($('.WooSlide--gallery-top .swiper-slide').length > 0) {
+      $('.WooSlide--gallery-top .swiper-slide').click(function(e) {
         // Allow user to open image link in new tab or download it
         if (e.which == 2 || e.ctrlKey || e.altKey) {
           return
         }
-        var ind = $(this)
-          .find('img')
-          .attr('data-ind')
+        var ind = $(this).index()
         e.preventDefault()
         var index = ind ? parseInt(ind) : 0
         openPswp(index)
