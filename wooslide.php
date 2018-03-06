@@ -274,6 +274,8 @@ function wooslide_woocommerce_show_product_thumbnails(){
 				</div>
 		</div>
 
+		<?php do_action( 'wooslide_after_main' ); ?>
+
 		<div class="swiper-container WooSlide--gallery-thumbs">
 		    <!-- Additional required wrapper -->
 		    <div class="swiper-wrapper">
@@ -283,12 +285,7 @@ function wooslide_woocommerce_show_product_thumbnails(){
 						} ?>
 		    </div>
 		</div>
-		<?php
-
-
-		// Hook After Wooswipe
-		do_action( 'wooslide_after_main' );
-		do_action( 'wooslide_after_thumbs' ); ?>
+		<?php do_action( 'wooslide_after_thumbs' ); ?>
 	</div>
 
 	<!-- PSWP -->
