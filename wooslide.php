@@ -245,10 +245,7 @@ function wooslide_woocommerce_show_product_thumbnails(){
 		}
 	}
 
-	if (count($images) > 0) {
-		cl($images);
-
-	} else {
+	if (count($images) <= 0) {
 		echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="%s" />', wc_placeholder_img_src(), __( 'Placeholder', 'woocommerce' ) ), $post->ID );
 	}
 
